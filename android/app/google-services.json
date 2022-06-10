@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "37236753496",
+    "project_id": "fbdemoe",
+    "storage_bucket": "fbdemoe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37236753496:android:d166804a524bbb9166762d",
+        "android_client_info": {
+          "package_name": "com.example.demo_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37236753496-tq8m6hbm2vagjp1vu5ilg2ud2mtnp6hk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demo_firebase",
+            "certificate_hash": "9439f1b210d1042abdb9db8b7b223c3a63998f2d"
+          }
+        },
+        {
+          "client_id": "37236753496-8ds03clek72nth3ivmjp8haf6k0f0v3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaryIU5RIdRJXcC90Zsv0V5qHn6-o2ccg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37236753496-8ds03clek72nth3ivmjp8haf6k0f0v3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
