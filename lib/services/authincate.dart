@@ -1,4 +1,5 @@
 import 'package:demo_firebase/models/user.dart';
+import 'package:demo_firebase/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,8 @@ class AuthService {
         password: password,
       );
       User? user = result.user;
-      return _usersFromFirebaseUser(user!);
+      await DatabaseService(uid: user!.uid).updateUserData('1', '${user.email}', 100);
+      return _usersFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
       return null;
