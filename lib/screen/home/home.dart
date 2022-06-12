@@ -1,5 +1,6 @@
 import 'package:demo_firebase/models/brew.dart';
 import 'package:demo_firebase/screen/home/brew_list.dart';
+import 'package:demo_firebase/screen/home/setting_form.dart';
 import 'package:demo_firebase/services/authincate.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_firebase/services/database.dart';
@@ -16,6 +17,18 @@ class _HomeState extends State<Home> {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
+    void _showSettingsPanel() {
+      showModalBottomSheet(
+          context: context,
+          builder: (context) {
+            return Container(
+              color: Colors.brown[50],
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              child: const SettingForm(),
+            );
+          });
+    }
+
     return StreamProvider<List<Brew?>?>.value(
       value: DatabaseService(uid: "").brews,
       initialData: null,
@@ -33,6 +46,11 @@ class _HomeState extends State<Home> {
               icon: const Icon(Icons.logout),
               tooltip: "Logout",
             ),
+            IconButton(
+              onPressed: () => _showSettingsPanel(),
+              icon: const Icon(Icons.edit),
+              tooltip: "Edit",
+            )
           ],
         ),
         backgroundColor: Colors.brown[100],
